@@ -1,0 +1,92 @@
+"use client";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Upload, LinkIcon, BarChart3, ArrowRight } from "lucide-react";
+
+const steps = [
+  {
+    number: "01",
+    icon: Upload,
+    title: "Upload your resume",
+    description:
+      "Drop your PDF resume. We extract and anonymize it in seconds using PyMuPDF — no data stored.",
+  },
+  {
+    number: "02",
+    icon: LinkIcon,
+    title: "Paste a job posting",
+    description:
+      "Paste any job URL — LinkedIn, Indeed, company site. We scrape and parse it live to extract the exact skills required.",
+  },
+  {
+    number: "03",
+    icon: BarChart3,
+    title: "Get your roadmap",
+    description:
+      "GPT-4o compares your profile to the role. You get prioritized skill gaps, verified resources, and a matched mentor.",
+  },
+];
+
+export default function HowItWorks() {
+  return (
+    <section id="how-it-works" className="py-24 px-6 border-t border-border">
+      <div className="mx-auto max-w-5xl">
+        <div className="text-center mb-16">
+          <p className="text-primary-light text-sm font-semibold uppercase tracking-widest mb-3">
+            How it works
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
+            Three steps to clarity
+          </h2>
+        </div>
+
+        <div className="relative">
+          {/* Connector line */}
+          <div className="hidden md:block absolute top-12 left-[calc(16.67%+2rem)] right-[calc(16.67%+2rem)] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {steps.map((step, i) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                className="flex flex-col items-center text-center"
+              >
+                {/* Icon circle */}
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow">
+                    <step.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-surface border border-border text-xs font-bold text-muted flex items-center justify-center">
+                    {step.number.slice(1)}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-semibold text-text-primary mb-3">{step.title}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-16 text-center"
+        >
+          <Link
+            href="/analyze"
+            className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-primary text-white font-semibold shadow-glow hover:opacity-90 transition-all"
+          >
+            Try it now — it&apos;s free
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

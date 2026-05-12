@@ -3,11 +3,17 @@ import json
 import pandas as pd
 import re
 import time
+from pathlib import Path
 from PyPDF2 import PdfReader
 from openai import OpenAI
 from sklearn.metrics.pairwise import cosine_similarity as sk_cosine
 import joblib
 import numpy as np
+
+# Resolve data directory — works locally and on Streamlit Cloud
+_HERE = Path(__file__).parent
+_CLOUD = Path("/mount/src/stepupyourcareer.ai/StepUpAI")
+DATA_DIR = _CLOUD if _CLOUD.exists() else _HERE
 
 # === Set up client ===
 st.set_page_config(page_title="StepUpYourCareer.AI", layout="wide")
@@ -34,19 +40,20 @@ def page_1():
             st.session_state.email = email
             st.session_state.page = 2
 
+@st.cache_data
 def load_examples():
-            with open("/mount/src/stepupyourcareer.ai/StepUpAI/skill_gap_analysis.json", "r") as f:
-                examples = json.load(f)
-            example_texts = [
-                f"Resume: {ex['resume_summary']} | Role: {ex['target_role']}" for ex in examples
-            ]
-            embeddings = [get_embedding(text) for text in example_texts]
-            return examples, embeddings
+    with open(str(DATA_DIR / "skill_gap_analysis.json"), "r") as f:
+        examples = json.load(f)
+    example_texts = [
+        f"Resume: {ex['resume_summary']} | Role: {ex['target_role']}" for ex in examples
+    ]
+    embeddings = [get_embedding(text) for text in example_texts]
+    return examples, embeddings
 
 # === Load Role Skills ===
 @st.cache_data
 def load_role_skills():
-    with open("/mount/src/stepupyourcareer.ai/StepUpAI/role_skills.json", "r") as f:
+    with open(str(DATA_DIR / "role_skills.json"), "r") as f:
         role_skills_list = json.load(f)
         return {
             entry["role"]: {
@@ -171,7 +178,7 @@ def extract_json_from_response(raw):
     return {}
 
 def load_skill_resources():
-    with open("/mount/src/stepupyourcareer.ai/StepUpAI/skill_resource_mapping.json", "r") as f:
+    with open(str(DATA_DIR / "skill_resource_mapping.json"), "r") as f:
         return json.load(f)
 
 # Helper: Split skill lists into (in-RAG, out-of-RAG) 
@@ -265,14 +272,14 @@ def generate_hybrid_action_plan(tech, soft, trans, skill_resources):
         except Exception as e:
                 st.error(f"Error generating GPT fallback plan: {e}")
 
-        return plan
-        
+    return plan
+
 # Load Mentor Clustering Model & Vectorizer
-with open('/mount/src/stepupyourcareer.ai/StepUpAI/models/mentor_clustering_model.pkl', 'rb') as f:
+with open(str(DATA_DIR / "models/mentor_clustering_model.pkl"), 'rb') as f:
         kmeans_final = joblib.load(f)
-with open('/mount/src/stepupyourcareer.ai/StepUpAI/models/fitted_vectorizer.pkl', 'rb') as f:
+with open(str(DATA_DIR / "models/fitted_vectorizer.pkl"), 'rb') as f:
     vectorizer = joblib.load(f)
-mentors_final_data = pd.read_json("/mount/src/stepupyourcareer.ai/StepUpAI/mentors_final_data.json")
+mentors_final_data = pd.read_json(str(DATA_DIR / "mentors_final_data.json"))
 
 def page_2():
     st.title("📄 Resume Analyzer + Mentor Recommender")

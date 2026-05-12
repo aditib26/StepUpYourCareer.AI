@@ -1,0 +1,86 @@
+[
+  { "skill_slug": "PYTHON", "title": "Python for Everybody Specialization", "url": "https://www.coursera.org/specializations/python", "type": "course", "platform": "Coursera", "description": "Beginner to intermediate Python. Best starting point." },
+  { "skill_slug": "PYTHON", "title": "Automate the Boring Stuff with Python", "url": "https://automatetheboringstuff.com", "type": "book", "platform": "Free online / No Starch Press", "description": "Practical Python for real-world automation tasks." },
+  { "skill_slug": "PYTHON", "title": "Python Data Science Handbook", "url": "https://jakevdp.github.io/PythonDataScienceHandbook/", "type": "book", "platform": "O'Reilly (free online)", "description": "NumPy, Pandas, Matplotlib, Scikit-learn." },
+
+  { "skill_slug": "SQL", "title": "SQL for Data Science", "url": "https://www.coursera.org/learn/sql-for-data-science", "type": "course", "platform": "Coursera / UC Davis", "description": "Foundations of SQL for analysts." },
+  { "skill_slug": "SQL", "title": "Mode SQL Tutorial", "url": "https://mode.com/sql-tutorial/", "type": "article", "platform": "Mode Analytics", "description": "Free interactive SQL practice from basic to advanced." },
+  { "skill_slug": "SQL", "title": "Learning SQL by Alan Beaulieu", "url": "https://www.oreilly.com/library/view/learning-sql-3rd/9781492057604/", "type": "book", "platform": "O'Reilly", "description": "Comprehensive SQL reference book." },
+
+  { "skill_slug": "MACHINE LEARNING", "title": "Machine Learning Specialization", "url": "https://www.coursera.org/specializations/machine-learning-introduction", "type": "course", "platform": "Coursera / DeepLearning.AI", "description": "Andrew Ng's flagship ML course — industry standard." },
+  { "skill_slug": "MACHINE LEARNING", "title": "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow", "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/", "type": "book", "platform": "O'Reilly", "description": "The definitive practical guide by Aurélien Géron." },
+  { "skill_slug": "MACHINE LEARNING", "title": "fast.ai Practical Deep Learning", "url": "https://course.fast.ai", "type": "course", "platform": "fast.ai (free)", "description": "Top-down practical ML course, free." },
+
+  { "skill_slug": "DEEP LEARNING", "title": "Deep Learning Specialization", "url": "https://www.coursera.org/specializations/deep-learning", "type": "course", "platform": "Coursera / DeepLearning.AI", "description": "5-course series covering neural networks to sequence models." },
+  { "skill_slug": "DEEP LEARNING", "title": "Deep Learning with Python", "url": "https://www.manning.com/books/deep-learning-with-python-second-edition", "type": "book", "platform": "Manning", "description": "By François Chollet, creator of Keras." },
+
+  { "skill_slug": "NATURAL LANGUAGE PROCESSING", "title": "Natural Language Processing Specialization", "url": "https://www.coursera.org/specializations/natural-language-processing", "type": "course", "platform": "Coursera / DeepLearning.AI", "description": "4-course NLP specialization." },
+  { "skill_slug": "NATURAL LANGUAGE PROCESSING", "title": "Speech and Language Processing", "url": "https://web.stanford.edu/~jurafsky/slp3/", "type": "book", "platform": "Stanford (free)", "description": "The canonical NLP textbook by Jurafsky & Martin." },
+  { "skill_slug": "NATURAL LANGUAGE PROCESSING", "title": "Hugging Face NLP Course", "url": "https://huggingface.co/learn/nlp-course/chapter1/1", "type": "course", "platform": "Hugging Face (free)", "description": "Transformers, fine-tuning, and production NLP." },
+
+  { "skill_slug": "DATA ANALYSIS", "title": "Google Data Analytics Certificate", "url": "https://www.coursera.org/professional-certificates/google-data-analytics", "type": "course", "platform": "Coursera / Google", "description": "End-to-end data analysis workflow." },
+  { "skill_slug": "DATA ANALYSIS", "title": "Python for Data Analysis", "url": "https://wesmckinney.com/book/", "type": "book", "platform": "O'Reilly (free online)", "description": "Pandas deep dive by its creator Wes McKinney." },
+
+  { "skill_slug": "DATA VISUALISATION", "title": "Storytelling with Data", "url": "https://www.storytellingwithdata.com/books", "type": "book", "platform": "Wiley", "description": "The definitive data viz for business communication book." },
+  { "skill_slug": "DATA VISUALISATION", "title": "Data Visualization with Python", "url": "https://www.coursera.org/learn/python-for-data-visualization", "type": "course", "platform": "Coursera / IBM", "description": "Matplotlib, Seaborn, Folium, Plotly." },
+  { "skill_slug": "DATA VISUALIZATION", "title": "Storytelling with Data", "url": "https://www.storytellingwithdata.com/books", "type": "book", "platform": "Wiley", "description": "The definitive data viz for business communication book." },
+
+  { "skill_slug": "STATISTICAL ANALYSIS", "title": "Statistics with Python Specialization", "url": "https://www.coursera.org/specializations/statistics-with-python", "type": "course", "platform": "Coursera / UMich", "description": "Visualizing, inferencing, and fitting statistical models." },
+  { "skill_slug": "STATISTICAL ANALYSIS", "title": "Think Stats", "url": "https://greenteapress.com/wp/think-stats-2e/", "type": "book", "platform": "Green Tea Press (free)", "description": "Probability and statistics for programmers." },
+
+  { "skill_slug": "CLOUD COMPUTING", "title": "AWS Cloud Practitioner Essentials", "url": "https://aws.amazon.com/training/learn-about/cloud-practitioner/", "type": "course", "platform": "AWS Training (free)", "description": "Official AWS fundamentals — best starting point for cloud." },
+  { "skill_slug": "CLOUD COMPUTING", "title": "Google Cloud Digital Leader", "url": "https://cloud.google.com/learn/certification/cloud-digital-leader", "type": "course", "platform": "Google Cloud", "description": "Entry-level GCP certification path." },
+  { "skill_slug": "CLOUD COMPUTING", "title": "Cloud Computing: Concepts, Technology & Architecture", "url": "https://www.amazon.com/Cloud-Computing-Concepts-Technology-Architecture/dp/0133387526", "type": "book", "platform": "Prentice Hall", "description": "Foundational cloud computing textbook." },
+
+  { "skill_slug": "BIG DATA TECHNOLOGIES", "title": "Big Data Specialization", "url": "https://www.coursera.org/specializations/big-data", "type": "course", "platform": "Coursera / UC San Diego", "description": "Hadoop, Spark, NoSQL, graph analytics." },
+  { "skill_slug": "BIG DATA TECHNOLOGIES", "title": "Learning Spark", "url": "https://www.oreilly.com/library/view/learning-spark-2nd/9781492050032/", "type": "book", "platform": "O'Reilly", "description": "Spark by the Databricks team — definitive reference." },
+
+  { "skill_slug": "ALGORITHM DEVELOPMENT", "title": "Algorithms, Part I & II", "url": "https://www.coursera.org/learn/algorithms-part1", "type": "course", "platform": "Coursera / Princeton", "description": "Sedgewick's classic algorithms course." },
+  { "skill_slug": "ALGORITHM DEVELOPMENT", "title": "Introduction to Algorithms (CLRS)", "url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/", "type": "book", "platform": "MIT Press", "description": "The standard algorithms textbook." },
+  { "skill_slug": "ALGORITHM DEVELOPMENT", "title": "LeetCode", "url": "https://leetcode.com", "type": "article", "platform": "LeetCode", "description": "Practice data structures & algorithms with 3000+ problems." },
+
+  { "skill_slug": "DATA MANAGEMENT", "title": "Database Management Essentials", "url": "https://www.coursera.org/learn/database-management", "type": "course", "platform": "Coursera / CU", "description": "Relational DB design, SQL, and query processing." },
+
+  { "skill_slug": "BUSINESS INTELLIGENCE TOOLS", "title": "Tableau Fundamentals", "url": "https://www.tableau.com/learn/training/elearning", "type": "course", "platform": "Tableau (free)", "description": "Official free Tableau e-learning platform." },
+  { "skill_slug": "BUSINESS INTELLIGENCE TOOLS", "title": "Microsoft Power BI Desktop", "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started", "type": "course", "platform": "Microsoft Learn (free)", "description": "Official Power BI learning path." },
+  { "skill_slug": "BUSINESS INTELLIGENCE TOOLS", "title": "Data Visualization: A Practical Introduction", "url": "https://www.amazon.com/Data-Visualization-Introduction-Kieran-Healy/dp/0691181624", "type": "book", "platform": "Princeton UP", "description": "Conceptual foundation for BI and visualization." },
+
+  { "skill_slug": "AGILE METHODOLOGIES", "title": "Agile with Atlassian Jira", "url": "https://www.coursera.org/learn/agile-atlassian-jira", "type": "course", "platform": "Coursera / Atlassian", "description": "Scrum and Kanban fundamentals with Jira." },
+  { "skill_slug": "AGILE METHODOLOGIES", "title": "Scrum: The Art of Doing Twice the Work in Half the Time", "url": "https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X", "type": "book", "platform": "Crown Business", "description": "The definitive Scrum book by its co-creator Jeff Sutherland." },
+
+  { "skill_slug": "SOFTWARE DEVELOPMENT", "title": "The Pragmatic Programmer", "url": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/", "type": "book", "platform": "Pragmatic Bookshelf", "description": "Essential reading for every software developer." },
+  { "skill_slug": "SOFTWARE DEVELOPMENT", "title": "Clean Code", "url": "https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882", "type": "book", "platform": "Prentice Hall", "description": "Robert C. Martin's guide to writing maintainable code." },
+
+  { "skill_slug": "ARTIFICIAL INTELLIGENCE", "title": "AI For Everyone", "url": "https://www.coursera.org/learn/ai-for-everyone", "type": "course", "platform": "Coursera / DeepLearning.AI", "description": "Non-technical AI literacy — great business context." },
+  { "skill_slug": "ARTIFICIAL INTELLIGENCE", "title": "Artificial Intelligence: A Modern Approach", "url": "https://aima.cs.berkeley.edu", "type": "book", "platform": "Pearson", "description": "The standard AI textbook by Russell & Norvig." },
+
+  { "skill_slug": "COMPUTER VISION", "title": "Convolutional Neural Networks", "url": "https://www.coursera.org/learn/convolutional-neural-networks", "type": "course", "platform": "Coursera / DeepLearning.AI", "description": "Course 4 of deep learning specialization — CNN focus." },
+  { "skill_slug": "COMPUTER VISION", "title": "Programming Computer Vision with Python", "url": "http://programmingcomputervision.com", "type": "book", "platform": "Free online", "description": "Hands-on OpenCV and image processing with Python." },
+
+  { "skill_slug": "ADVANCED EXCEL SKILLS", "title": "Excel Skills for Business Specialization", "url": "https://www.coursera.org/specializations/excel", "type": "course", "platform": "Coursera / Macquarie", "description": "From essentials to advanced data analysis in Excel." },
+
+  { "skill_slug": "API SKILL DEVELOPMENT", "title": "APIs and Web Services", "url": "https://www.youtube.com/watch?v=GZvSYJDk-us", "type": "video", "platform": "YouTube / freeCodeCamp", "description": "REST APIs fundamentals — 2-hour free video." },
+  { "skill_slug": "API SKILL DEVELOPMENT", "title": "REST API Design Rulebook", "url": "https://www.oreilly.com/library/view/rest-api-design/9781449317904/", "type": "book", "platform": "O'Reilly", "description": "Industry standards for designing RESTful APIs." },
+
+  { "skill_slug": "DATA CLEANING", "title": "Data Cleaning in Python", "url": "https://www.datacamp.com/courses/cleaning-data-in-python", "type": "course", "platform": "DataCamp", "description": "Handle missing values, outliers, and inconsistencies." },
+
+  { "skill_slug": "DATA WAREHOUSING", "title": "Data Warehousing for Business Intelligence Specialization", "url": "https://www.coursera.org/specializations/data-warehousing", "type": "course", "platform": "Coursera / CU", "description": "Design, build, and query data warehouses." },
+  { "skill_slug": "DATA WAREHOUSING", "title": "The Data Warehouse Toolkit", "url": "https://www.amazon.com/Data-Warehouse-Toolkit-Definitive-Dimensional/dp/1118530802", "type": "book", "platform": "Wiley", "description": "Kimball's definitive dimensional modeling guide." },
+
+  { "skill_slug": "PROBLEM SOLVING", "title": "Think Like a Programmer", "url": "https://www.amazon.com/Think-Like-Programmer-Introduction-Creative/dp/1593274246", "type": "book", "platform": "No Starch Press", "description": "Structured problem-solving for developers." },
+  { "skill_slug": "PROBLEM SOLVING", "title": "How to Solve It by George Pólya", "url": "https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069111966X", "type": "book", "platform": "Princeton UP", "description": "Classic problem-solving framework applicable to any domain." },
+
+  { "skill_slug": "COMMUNICATION", "title": "Communication Skills for Engineers", "url": "https://www.coursera.org/specializations/communication-skills-engineers", "type": "course", "platform": "Coursera / Rice", "description": "Technical writing, presentations, and professional communication." },
+  { "skill_slug": "COMMUNICATION", "title": "Crucial Conversations", "url": "https://www.amazon.com/Crucial-Conversations-Talking-Stakes-Second/dp/1469266822", "type": "book", "platform": "McGraw-Hill", "description": "Handle high-stakes conversations with confidence." },
+
+  { "skill_slug": "PROJECT MANAGEMENT", "title": "Google Project Management Certificate", "url": "https://www.coursera.org/professional-certificates/google-project-management", "type": "course", "platform": "Coursera / Google", "description": "End-to-end project management — Agile and Waterfall." },
+  { "skill_slug": "PROJECT MANAGEMENT", "title": "A Guide to the Project Management Body of Knowledge (PMBOK)", "url": "https://www.pmi.org/pmbok-guide-standards/foundational/pmbok", "type": "book", "platform": "PMI", "description": "Industry-standard PM reference guide." },
+
+  { "skill_slug": "DATA MODELLING", "title": "Data Modeling Made Simple", "url": "https://www.amazon.com/Data-Modeling-Made-Simple-Practitioners/dp/0977140067", "type": "book", "platform": "Technics Publications", "description": "Conceptual, logical, and physical data modeling." },
+
+  { "skill_slug": "DATABASE DESIGN", "title": "Database Design for Mere Mortals", "url": "https://www.amazon.com/Database-Design-Mere-Mortals-Hands/dp/0321884493", "type": "book", "platform": "Addison-Wesley", "description": "Practical relational database design." },
+
+  { "skill_slug": "BUSINESS INTELLIGENCE REPORTING", "title": "Looker / Looker Studio Tutorials", "url": "https://lookerstudio.google.com/learning", "type": "course", "platform": "Google (free)", "description": "Official Looker Studio learning resources." },
+
+  { "skill_slug": "BUSINESS PROCESS MODELLING", "title": "Business Analysis Fundamentals", "url": "https://www.udemy.com/course/business-analysis-ba/", "type": "course", "platform": "Udemy", "description": "BPMN, process flows, and requirements analysis." }
+]
