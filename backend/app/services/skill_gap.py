@@ -2,11 +2,12 @@ from openai import AsyncOpenAI
 from app.models.schemas import ParsedJD, SkillGapResult, ScoredSkill
 from app.core.config import settings
 
-_client = AsyncOpenAI(api_key=settings.openai_api_key)
+def _get_client() -> AsyncOpenAI:
+    return AsyncOpenAI(api_key=settings.openai_api_key)
 
 
 async def anonymize_resume(resume_text: str) -> str:
-    response = await _client.chat.completions.create(
+    response = await _get_client().chat.completions.create(
         model="gpt-4o-mini",
         temperature=0,
         messages=[
@@ -35,7 +36,7 @@ async def analyze_skill_gap(
         f"Nice-to-have: {', '.join(parsed_jd.nice_to_have_skills)}"
     )
 
-    response = await _client.beta.chat.completions.parse(
+    response = await _get_client().beta.chat.completions.parse(
         model=settings.chat_model,
         temperature=0,
         messages=[

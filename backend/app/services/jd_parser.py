@@ -3,7 +3,8 @@ from openai import AsyncOpenAI
 from app.models.schemas import ParsedJD
 from app.core.config import settings
 
-_client = AsyncOpenAI(api_key=settings.openai_api_key)
+def _get_client() -> AsyncOpenAI:
+    return AsyncOpenAI(api_key=settings.openai_api_key)
 
 
 async def fetch_jd_from_url(url: str) -> str:
@@ -17,7 +18,7 @@ async def fetch_jd_from_url(url: str) -> str:
 
 async def parse_jd(jd_text: str) -> ParsedJD:
     """Extract structured fields from raw job description text using GPT-4o Structured Outputs."""
-    response = await _client.beta.chat.completions.parse(
+    response = await _get_client().beta.chat.completions.parse(
         model=settings.chat_model,
         temperature=0,
         messages=[
