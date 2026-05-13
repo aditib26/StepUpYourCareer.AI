@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// Force all routes to render dynamically (auth depends on cookies)
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "StepUpYourCareer.AI — Know your gaps. Bridge them fast.",
   description:
