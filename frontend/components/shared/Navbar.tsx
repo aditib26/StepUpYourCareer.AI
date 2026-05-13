@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { TrendingUp } from "lucide-react";
+import UserMenu from "./UserMenu";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -28,7 +29,7 @@ export default function Navbar() {
         </Link>
 
         {/* Nav links */}
-        <div className="flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -43,14 +44,10 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-
-          <Link
-            href="/analyze"
-            className="ml-3 px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-primary text-white shadow-glow-sm hover:shadow-glow hover:opacity-90 transition-all"
-          >
-            Start Analysis
-          </Link>
         </div>
+
+        {/* Right side: user menu / auth buttons */}
+        <UserMenu />
       </div>
     </nav>
   );
