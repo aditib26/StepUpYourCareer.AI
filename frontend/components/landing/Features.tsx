@@ -5,54 +5,54 @@ import { Target, BookOpen, Users, Zap, Shield, TrendingUp } from "lucide-react";
 const features = [
   {
     icon: Target,
-    title: "JD-Specific Gap Analysis",
+    title: "Gap analysis against a real job",
     description:
-      "Paste any LinkedIn, Indeed, or company job posting. We analyze your gaps against *that exact role*, not a generic template.",
+      "Paste a LinkedIn, Indeed, or company URL. The analysis is for that posting — not a generic role.",
     color: "text-violet-400",
     bg: "bg-violet-400/10",
     border: "border-violet-400/20",
   },
   {
     icon: Zap,
-    title: "Pareto Prioritization",
+    title: "Three skills to focus on",
     description:
-      "The 80/20 rule applied to your career. We surface the 3 skills that will move the needle most — so you study what matters.",
+      "We rank gaps using the 80/20 principle, so you spend time on the skills that actually move the needle.",
     color: "text-yellow-400",
     bg: "bg-yellow-400/10",
     border: "border-yellow-400/20",
   },
   {
     icon: BookOpen,
-    title: "Verified Learning Roadmap",
+    title: "Verified learning resources",
     description:
-      "No hallucinated URLs. Every course, book, and video is curated and verified. Real links that actually work.",
+      "Hand-curated courses, books, and videos. Every link is checked. No hallucinated URLs.",
     color: "text-blue-400",
     bg: "bg-blue-400/10",
     border: "border-blue-400/20",
   },
   {
     icon: Users,
-    title: "Mentor Matching",
+    title: "Mentor matching",
     description:
-      "Get matched to professionals already working in your target role via skill-based clustering — not random recommendations.",
+      "K-means clustering pairs you with people already working in the target role.",
     color: "text-emerald-400",
     bg: "bg-emerald-400/10",
     border: "border-emerald-400/20",
   },
   {
     icon: Shield,
-    title: "Privacy First",
+    title: "Anonymized by default",
     description:
-      "Your resume is anonymized before any AI processing. We never store your personal information.",
+      "Your resume is stripped of personal details before any AI sees it.",
     color: "text-pink-400",
     bg: "bg-pink-400/10",
     border: "border-pink-400/20",
   },
   {
     icon: TrendingUp,
-    title: "Progress Tracking",
+    title: "Progress over time",
     description:
-      "Log skills as you learn them. Watch your gap shrink over time. Turn analysis into action.",
+      "Mark skills as you learn them. The dashboard tracks gap closure across analyses.",
     color: "text-orange-400",
     bg: "bg-orange-400/10",
     border: "border-orange-400/20",
@@ -76,13 +76,13 @@ export default function Features() {
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="text-primary-light text-sm font-semibold uppercase tracking-widest mb-3">
-            Everything you need
+            What it does
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-            Built for serious job seekers
+            One workflow. Six tools.
           </h2>
           <p className="text-text-secondary max-w-xl mx-auto">
-            Not another resume builder. A full career intelligence layer between you and your next role.
+            Each tool uses your resume and a specific job description. Together they cover everything from gap analysis to interview prep.
           </p>
         </div>
 

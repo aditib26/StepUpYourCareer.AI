@@ -136,10 +136,9 @@ export default function InterviewPage() {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-primary mx-auto mb-4 flex items-center justify-center shadow-glow">
                     <Mic className="w-7 h-7 text-white" />
                   </div>
-                  <h1 className="text-3xl font-bold text-text-primary mb-2">AI Mock Interviewer</h1>
+                  <h1 className="text-3xl font-bold text-text-primary mb-2">Mock interview</h1>
                   <p className="text-text-secondary text-sm max-w-lg mx-auto">
-                    Voice-based mock interview. 5 questions tailored to your resume + the role.
-                    Real-time speech, real feedback at the end.
+                    Five questions for the role you&apos;re targeting. Voice in, voice out. Scored feedback at the end.
                   </p>
                 </div>
 
@@ -183,12 +182,11 @@ export default function InterviewPage() {
                   className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-primary text-white font-semibold text-base shadow-glow disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-all"
                 >
                   <Sparkles className="w-4 h-4" />
-                  Start Mock Interview
+                  Start interview
                 </button>
 
                 <div className="p-4 rounded-xl border border-border bg-card text-xs text-text-secondary leading-relaxed">
-                  <strong className="text-text-primary">Heads up:</strong> we&apos;ll need microphone access.
-                  The interview takes ~5–10 minutes. Take your time on each answer — the better your responses, the more useful the feedback.
+                  Microphone access is required. The interview takes 5–10 minutes. Longer, more specific answers produce more useful feedback.
                 </div>
               </motion.div>
             )}
@@ -283,8 +281,8 @@ export default function InterviewPage() {
                 className="pt-32 text-center"
               >
                 <Loader2 className="w-12 h-12 text-primary-light animate-spin mx-auto mb-6" />
-                <h2 className="text-2xl font-bold text-text-primary mb-3">Generating your feedback report...</h2>
-                <p className="text-sm text-text-secondary">Analyzing your responses across communication, technical depth, and structure.</p>
+                <h2 className="text-2xl font-bold text-text-primary mb-3">Generating feedback…</h2>
+                <p className="text-sm text-text-secondary">Scoring your answers on communication, technical depth, and structure.</p>
               </motion.div>
             )}
 

@@ -38,8 +38,8 @@ export default function ResumeRewriterPage() {
     <>
       <Navbar />
       <ToolShell
-        title="Resume Rewriter"
-        subtitle="Transforms weak bullets into XYZ-formula achievements."
+        title="Resume rewriter"
+        subtitle="Rewrites your bullets using the XYZ formula with JD keywords."
         icon={<PenLine className="w-5 h-5 text-white" />}
       >
         {!result && (
@@ -86,12 +86,12 @@ export default function ResumeRewriterPage() {
               {loading ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  Rewriting bullets...
+                  Rewriting…
                 </>
               ) : (
                 <>
                   <Sparkles className="w-4 h-4" />
-                  Rewrite My Resume
+                  Rewrite
                 </>
               )}
             </button>
@@ -116,14 +116,14 @@ export default function ResumeRewriterPage() {
 
             {/* Overall advice */}
             <div className="p-5 rounded-2xl border border-primary/30 bg-primary/5">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary-light mb-2">Overall Strategy</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary-light mb-2">Strategy</p>
               <p className="text-sm text-text-secondary leading-relaxed">{result.overall_advice}</p>
             </div>
 
             {/* Keywords */}
             {result.keywords_to_emphasize.length > 0 && (
               <div className="p-5 rounded-2xl border border-border bg-card">
-                <p className="text-xs font-semibold text-text-secondary uppercase tracking-widest mb-3">Keywords to Emphasize</p>
+                <p className="text-xs font-semibold text-text-secondary uppercase tracking-widest mb-3">Keywords to emphasize</p>
                 <div className="flex flex-wrap gap-2">
                   {result.keywords_to_emphasize.map((k) => (
                     <span key={k} className="px-2.5 py-1 rounded-md text-xs bg-primary/10 border border-primary/20 text-primary-light">{k}</span>
@@ -171,7 +171,7 @@ export default function ResumeRewriterPage() {
             {/* Sections to add */}
             {result.sections_to_add.length > 0 && (
               <div className="p-5 rounded-2xl border border-border bg-card">
-                <p className="text-xs font-semibold text-text-secondary uppercase tracking-widest mb-3">Sections to Add</p>
+                <p className="text-xs font-semibold text-text-secondary uppercase tracking-widest mb-3">Sections to add</p>
                 <ul className="space-y-1.5">
                   {result.sections_to_add.map((s) => (
                     <li key={s} className="text-sm text-text-secondary flex items-center gap-2">

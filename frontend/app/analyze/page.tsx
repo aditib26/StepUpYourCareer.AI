@@ -81,16 +81,16 @@ export default function AnalyzePage() {
         <div className="mx-auto max-w-4xl">
 
           {/* Header */}
-          <div className="text-center mb-10 pt-8">
-            <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-3">
+          <div className="mb-10 pt-8">
+            <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-2">
               {stage === "results" && result
-                ? `Your Gap Report · ${result.target_role}`
-                : "Analyze Your Career Gap"}
+                ? `${result.target_role}`
+                : "New analysis"}
             </h1>
-            <p className="text-text-secondary">
+            <p className="text-text-secondary text-sm">
               {stage === "results"
-                ? `${result?.company_name ? `For ${result.company_name} · ` : ""}Powered by GPT-4o + Pareto Prioritization`
-                : "Upload your resume and paste a job posting to get started."}
+                ? result?.company_name ? `${result.company_name} · gap report` : "Gap report"
+                : "Add a resume and a job description. The output is below."}
             </p>
           </div>
 
@@ -159,11 +159,11 @@ export default function AnalyzePage() {
                   className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-primary text-white font-semibold text-base shadow-glow disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 hover:shadow-glow transition-all"
                 >
                   <Sparkles className="w-4 h-4" />
-                  {canSubmit ? "Analyze My Career Gap" : "Fill in all fields to continue"}
+                  {canSubmit ? "Run analysis" : "Fill in all fields to continue"}
                 </button>
 
                 <p className="text-center text-xs text-muted">
-                  Your resume is anonymized before AI processing. We never store personal data.
+                  Personal details are stripped from your resume before it reaches the model.
                 </p>
               </motion.div>
             )}
@@ -196,7 +196,7 @@ export default function AnalyzePage() {
                 {/* Top Pareto priorities */}
                 <div className="p-6 rounded-2xl border border-primary/30 bg-primary/5">
                   <p className="text-xs font-semibold uppercase tracking-widest text-primary-light mb-4">
-                    🎯 Pareto Focus — Top 3 Skills (80% of the result)
+                    Top 3 priorities
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {result.top_skills.map((s, i) => (
@@ -222,7 +222,7 @@ export default function AnalyzePage() {
                     onClick={() => { setStage("input"); setResult(null); setProgress(0); }}
                     className="px-6 py-3 rounded-xl border border-border text-text-secondary hover:text-text-primary hover:border-border-light text-sm font-medium transition-all"
                   >
-                    ← Start a new analysis
+                    ← New analysis
                   </button>
                 </div>
               </motion.div>

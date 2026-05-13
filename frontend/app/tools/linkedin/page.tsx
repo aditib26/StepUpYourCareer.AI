@@ -44,8 +44,8 @@ export default function LinkedInPage() {
     <>
       <Navbar />
       <ToolShell
-        title="LinkedIn Optimizer"
-        subtitle="Rewrites your profile for maximum recruiter visibility."
+        title="LinkedIn profile"
+        subtitle="Rewrites your headline, About section, and experience bullets."
         icon={<Linkedin className="w-5 h-5 text-white" />}
       >
         {!result && (
@@ -103,12 +103,12 @@ export default function LinkedInPage() {
               {loading ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  Optimizing your profile...
+                  Rewriting…
                 </>
               ) : (
                 <>
                   <Sparkles className="w-4 h-4" />
-                  Optimize My LinkedIn
+                  Generate
                 </>
               )}
             </button>
@@ -128,7 +128,7 @@ export default function LinkedInPage() {
 
             {/* Headlines */}
             <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">3 Headline Options</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">Headlines (3 angles)</p>
               {result.headline_options.map((h, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 rounded-xl border border-border bg-card">
                   <span className="text-lg font-black text-primary-light">#{i + 1}</span>
@@ -141,7 +141,7 @@ export default function LinkedInPage() {
             {/* About */}
             <div className="p-5 rounded-2xl border border-primary/30 bg-primary/5">
               <div className="flex items-center justify-between mb-3">
-                <p className="text-xs font-semibold uppercase tracking-widest text-primary-light">About Section</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary-light">About section</p>
                 <CopyButton text={result.about_section} />
               </div>
               <p className="text-sm text-text-secondary leading-relaxed whitespace-pre-wrap">{result.about_section}</p>
@@ -149,7 +149,7 @@ export default function LinkedInPage() {
 
             {/* Skills */}
             <div className="p-5 rounded-2xl border border-border bg-card">
-              <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary mb-3">Skills LinkedIn Should List</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary mb-3">Skills to list</p>
               <div className="flex flex-wrap gap-2">
                 {result.skills_to_add.map((s) => (
                   <span key={s} className="px-2.5 py-1 rounded-md text-xs bg-primary/10 border border-primary/20 text-primary-light">{s}</span>
@@ -160,7 +160,7 @@ export default function LinkedInPage() {
             {/* Experience bullets */}
             {result.experience_bullets.length > 0 && (
               <div className="space-y-3">
-                <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">Experience Bullets</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">Experience bullets</p>
                 {result.experience_bullets.map((b, i) => (
                   <div key={i} className="p-4 rounded-xl border border-border bg-card">
                     {b.original && (
@@ -179,7 +179,7 @@ export default function LinkedInPage() {
 
             {/* Profile strength tips */}
             <div className="p-5 rounded-2xl border border-border bg-card">
-              <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary mb-3">Profile Strength Tips</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary mb-3">Next steps</p>
               <ul className="space-y-2">
                 {result.profile_strength_tips.map((t, i) => (
                   <li key={i} className="text-sm text-text-secondary flex gap-2">

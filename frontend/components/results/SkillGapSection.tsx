@@ -10,7 +10,7 @@ export default function SkillGapSection({ gaps }: Props) {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-lg font-semibold text-text-primary">Skill Gap Analysis</h2>
+      <h2 className="text-lg font-semibold text-text-primary">Gaps</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Technical gaps */}

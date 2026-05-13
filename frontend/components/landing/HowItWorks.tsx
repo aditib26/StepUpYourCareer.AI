@@ -7,23 +7,23 @@ const steps = [
   {
     number: "01",
     icon: Upload,
-    title: "Upload your resume",
+    title: "Add your resume",
     description:
-      "Drop your PDF resume. We extract and anonymize it in seconds using PyMuPDF — no data stored.",
+      "Upload a PDF. Text is extracted and personal details are stripped before anything is sent to the model.",
   },
   {
     number: "02",
     icon: LinkIcon,
-    title: "Paste a job posting",
+    title: "Add a job description",
     description:
-      "Paste any job URL — LinkedIn, Indeed, company site. We scrape and parse it live to extract the exact skills required.",
+      "Paste a URL or the full text. The required skills get extracted for that specific role.",
   },
   {
     number: "03",
     icon: BarChart3,
-    title: "Get your roadmap",
+    title: "Get the output",
     description:
-      "GPT-4o compares your profile to the role. You get prioritized skill gaps, verified resources, and a matched mentor.",
+      "Prioritized gaps, curated resources, mentor matches. From there, run the tools — cover letter, mock interview, LinkedIn rewrite.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function HowItWorks() {
             How it works
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">
-            Three steps to clarity
+            Three inputs. One output.
           </h2>
         </div>
 
@@ -82,7 +82,7 @@ export default function HowItWorks() {
             href="/analyze"
             className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-primary text-white font-semibold shadow-glow hover:opacity-90 transition-all"
           >
-            Try it now — it&apos;s free
+            Start an analysis
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>

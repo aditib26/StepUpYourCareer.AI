@@ -15,7 +15,7 @@ export default function HomePage() {
         {/* Footer */}
         <footer className="border-t border-border py-10 px-6 text-center">
           <p className="text-sm text-muted">
-            © 2025 StepUpYourCareer.AI · Built for the builders of tomorrow
+            © 2026 StepUpYourCareer.AI
           </p>
         </footer>
       </main>

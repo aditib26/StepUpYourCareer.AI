@@ -57,8 +57,8 @@ export default function ColdEmailPage() {
     <>
       <Navbar />
       <ToolShell
-        title="Cold Email Generator"
-        subtitle="High-response-rate outreach. No 'I hope this finds you well'."
+        title="Cold email"
+        subtitle="Outreach for a named person at a target company."
         icon={<Mail className="w-5 h-5 text-white" />}
       >
         {!result && (
@@ -159,12 +159,12 @@ export default function ColdEmailPage() {
               {loading ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  Crafting your email...
+                  Drafting…
                 </>
               ) : (
                 <>
                   <Sparkles className="w-4 h-4" />
-                  Generate Email
+                  Generate
                 </>
               )}
             </button>
@@ -192,7 +192,7 @@ export default function ColdEmailPage() {
               <p className="text-sm text-text-primary mb-6 pb-6 border-b border-border">{result.subject_line}</p>
 
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold text-text-secondary uppercase tracking-widest">Email Body</span>
+                <span className="text-xs font-semibold text-text-secondary uppercase tracking-widest">Body</span>
                 <CopyButton text={result.email_body} label="Copy body" />
               </div>
               <p className="text-sm text-text-secondary leading-relaxed whitespace-pre-wrap">{result.email_body}</p>
@@ -201,7 +201,7 @@ export default function ColdEmailPage() {
             {/* Follow-up */}
             <div className="p-6 rounded-2xl border border-border bg-card">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold text-text-secondary uppercase tracking-widest">7-Day Follow-Up</span>
+                <span className="text-xs font-semibold text-text-secondary uppercase tracking-widest">7-day follow-up</span>
                 <CopyButton text={result.follow_up_text} label="Copy" />
               </div>
               <p className="text-sm text-text-secondary leading-relaxed whitespace-pre-wrap">{result.follow_up_text}</p>
@@ -212,7 +212,7 @@ export default function ColdEmailPage() {
               <div className="p-5 rounded-2xl border border-yellow-400/20 bg-yellow-400/5">
                 <p className="text-xs font-semibold uppercase tracking-widest text-yellow-400 mb-3 flex items-center gap-1.5">
                   <Lightbulb className="w-3 h-3" />
-                  Make It Even More Personal
+                  Personalize further
                 </p>
                 <ul className="space-y-2">
                   {result.personalization_notes.map((n, i) => (

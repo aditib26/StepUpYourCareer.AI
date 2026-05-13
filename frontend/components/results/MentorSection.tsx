@@ -11,9 +11,9 @@ export default function MentorSection({ mentors }: Props) {
   return (
     <section className="space-y-4">
       <div>
-        <h2 className="text-lg font-semibold text-text-primary">Matched Mentors</h2>
+        <h2 className="text-lg font-semibold text-text-primary">Mentors</h2>
         <p className="text-xs text-muted mt-1">
-          Matched by skill-cluster alignment — people who&apos;ve bridged the same gaps you have.
+          Matched by skill cluster — people in the role you&apos;re targeting.
         </p>
       </div>
 

@@ -31,7 +31,7 @@ export default function InterviewFeedbackView({ feedback, onRestart }: Props) {
     <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
       {/* Headline score */}
       <div className="p-8 rounded-3xl border border-primary/30 bg-primary/5 text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary-light mb-3">Overall Score</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-primary-light mb-3">Overall</p>
         <p className={cn("text-7xl font-extrabold gradient-text mb-3")}>{feedback.overall_score}</p>
         <p className="text-sm text-text-secondary max-w-xl mx-auto">{feedback.summary}</p>
       </div>
@@ -48,7 +48,7 @@ export default function InterviewFeedbackView({ feedback, onRestart }: Props) {
         <div className="p-5 rounded-2xl border border-emerald-400/20 bg-emerald-400/5">
           <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">
             <ThumbsUp className="w-3 h-3" />
-            Strengths
+            What worked
           </p>
           <ul className="space-y-2">
             {feedback.strengths.map((s, i) => (
@@ -63,7 +63,7 @@ export default function InterviewFeedbackView({ feedback, onRestart }: Props) {
         <div className="p-5 rounded-2xl border border-orange-400/20 bg-orange-400/5">
           <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-orange-400 mb-3">
             <Wrench className="w-3 h-3" />
-            Areas to Improve
+            What to work on
           </p>
           <ul className="space-y-2">
             {feedback.improvements.map((s, i) => (
@@ -78,7 +78,7 @@ export default function InterviewFeedbackView({ feedback, onRestart }: Props) {
 
       {/* Per-question feedback */}
       <div className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">Question-by-Question Breakdown</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">By question</p>
         {feedback.per_question_feedback.map((q, i) => (
           <div key={i} className="p-5 rounded-2xl border border-border bg-card">
             <div className="flex items-center justify-between mb-3">
@@ -100,7 +100,7 @@ export default function InterviewFeedbackView({ feedback, onRestart }: Props) {
           onClick={onRestart}
           className="px-6 py-3 rounded-xl bg-gradient-primary text-white text-sm font-semibold shadow-glow hover:opacity-90 transition-all"
         >
-          Take Another Interview
+          New interview
         </button>
       </div>
     </motion.div>

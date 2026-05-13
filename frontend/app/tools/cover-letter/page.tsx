@@ -46,8 +46,8 @@ export default function CoverLetterPage() {
     <>
       <Navbar />
       <ToolShell
-        title="Cover Letter Generator"
-        subtitle="Tailored to a specific job posting using your resume."
+        title="Cover letter"
+        subtitle="Writes a letter for one specific job description."
         icon={<FileText className="w-5 h-5 text-white" />}
       >
         {!result && (
@@ -125,12 +125,12 @@ export default function CoverLetterPage() {
               {loading ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  Generating your cover letter...
+                  Writing…
                 </>
               ) : (
                 <>
                   <Sparkles className="w-4 h-4" />
-                  Generate Cover Letter
+                  Generate
                 </>
               )}
             </button>

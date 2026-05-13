@@ -5,8 +5,8 @@ import { FileText, PenLine, Mail, Linkedin, Mic, ArrowRight } from "lucide-react
 const tools = [
   {
     href: "/tools/cover-letter",
-    title: "Cover Letter Generator",
-    description: "Tailored, non-generic cover letters that connect your experience directly to the role.",
+    title: "Cover Letter",
+    description: "Writes a cover letter tailored to a specific job description and your resume.",
     icon: FileText,
     accent: "from-violet-500 to-purple-600",
     time: "~10s",
@@ -14,35 +14,34 @@ const tools = [
   {
     href: "/tools/resume-rewriter",
     title: "Resume Rewriter",
-    description: "Transforms weak bullets into XYZ-formula achievements with quantified impact.",
+    description: "Rewrites your bullets using the XYZ formula with quantified outcomes and JD keywords.",
     icon: PenLine,
     accent: "from-blue-500 to-cyan-600",
     time: "~15s",
   },
   {
     href: "/tools/cold-email",
-    title: "Cold Email Generator",
-    description: "High-response outreach emails for recruiters, hiring managers, and informational interviews.",
+    title: "Cold Email",
+    description: "Drafts an outreach email and a 7-day follow-up for a named person at a target company.",
     icon: Mail,
     accent: "from-emerald-500 to-teal-600",
     time: "~8s",
   },
   {
     href: "/tools/linkedin",
-    title: "LinkedIn Optimizer",
-    description: "Rewrites your headline, About section, and experience bullets for maximum recruiter visibility.",
+    title: "LinkedIn Profile",
+    description: "Generates a new headline, About section, skills list, and rewritten experience bullets.",
     icon: Linkedin,
     accent: "from-sky-500 to-blue-600",
     time: "~12s",
   },
   {
     href: "/interview",
-    title: "AI Mock Interviewer",
-    description: "Voice-based mock interview powered by GPT-4o. Real questions, real feedback, real growth.",
+    title: "Mock Interview",
+    description: "Voice-based interview with five role-specific questions and a scored feedback report.",
     icon: Mic,
     accent: "from-pink-500 to-rose-600",
     time: "~10 min",
-    featured: true,
   },
 ];
 
@@ -54,16 +53,12 @@ export default function ToolsPage() {
         <div className="mx-auto max-w-5xl">
 
           {/* Header */}
-          <div className="pt-10 mb-12 text-center">
-            <p className="text-primary-light text-sm font-semibold uppercase tracking-widest mb-3">
-              AI Tools
-            </p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
-              Your <span className="gradient-text">unfair advantage</span>
+          <div className="pt-10 mb-12">
+            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-3">
+              Tools
             </h1>
-            <p className="text-text-secondary max-w-xl mx-auto">
-              Every tool below is powered by GPT-4o + your resume + a real job posting.
-              No generic templates. No fluff.
+            <p className="text-text-secondary max-w-xl">
+              Each tool takes your resume and a job description and returns something specific. Pick one to start.
             </p>
           </div>
 
@@ -73,16 +68,8 @@ export default function ToolsPage() {
               <Link
                 key={tool.href}
                 href={tool.href}
-                className={`group relative overflow-hidden rounded-2xl border bg-card card-glow p-6 ${
-                  tool.featured ? "border-primary/40 md:col-span-2" : "border-border"
-                }`}
+                className="group relative overflow-hidden rounded-2xl border bg-card card-glow p-6 border-border"
               >
-                {tool.featured && (
-                  <span className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-primary/15 border border-primary/30 text-primary-light text-xs font-semibold">
-                    ✨ Featured
-                  </span>
-                )}
-
                 <div className="flex items-start gap-4">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.accent} flex items-center justify-center flex-shrink-0 shadow-glow-sm`}>
                     <tool.icon className="w-5 h-5 text-white" />
@@ -95,7 +82,7 @@ export default function ToolsPage() {
                     </div>
                     <p className="text-sm text-text-secondary leading-relaxed">{tool.description}</p>
                     <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-primary-light group-hover:gap-2.5 transition-all">
-                      Open tool <ArrowRight className="w-3 h-3" />
+                      Open <ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
                 </div>
