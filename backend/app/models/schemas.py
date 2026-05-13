@@ -164,6 +164,13 @@ class InterviewRespondResponse(BaseModel):
     is_complete: bool = False
 
 
+class PerQuestionFeedback(BaseModel):
+    question: str
+    answer: str
+    score: int                        # 0-100
+    feedback: str                     # 2-3 sentences of specific feedback
+
+
 class InterviewFeedback(BaseModel):
     overall_score: int                # 0-100
     communication_score: int          # 0-100
@@ -171,5 +178,5 @@ class InterviewFeedback(BaseModel):
     structure_score: int              # 0-100 (STAR method usage)
     strengths: list[str]
     improvements: list[str]
-    per_question_feedback: list[dict]
+    per_question_feedback: list[PerQuestionFeedback]
     summary: str
